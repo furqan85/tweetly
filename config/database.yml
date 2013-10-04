@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: tweetly_development
   pool: 5
-  username: tweetly
-  password:
+  username: mindvalley
+  password: password
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -52,4 +52,4 @@ production:
   database: tweetly_production
   pool: 5
   username: tweetly
-  password:
+  password: m1ndVa113y
