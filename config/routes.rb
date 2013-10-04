@@ -1,9 +1,8 @@
 Tweetly::Application.routes.draw do
-  get "welcome/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
+  match 'auth/twitter/callback', to: 'sessions#create'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
