@@ -1,0 +1,5 @@
+<h1>Home#index</h1>
+<% @tweets.try(:each) do |t| %>
+  <%= t.text %>&nbsp;
+  <%= link_to "Pocket this", "#" %><br/>
+<% end %>
