@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :provider, :uid
 
+  has_many :connections
+  has_many :services, through: :connections
+
   def self.from_omniauth(auth)
   	user ||= where(auth.slice("provider", "uid")).first || create_from_omniauth(auth)
   	user.oauth_token = auth["credentials"]["token"]

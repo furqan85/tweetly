@@ -5,7 +5,7 @@ Tweetly::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   match 'auth/twitter/callback', to: 'sessions#create'
-  match 'auth/pocket/callback', to: 'sessions#create'
+  match 'auth/pocket/callback', to: 'sessions#pocket'
   # match 'auth/failure', to: redirect('/') # doesnt work in dev mode but handy in production in case of failure
   match 'signout', to: 'sessions#destroy', as: 'signout'
   # Sample of regular route:
